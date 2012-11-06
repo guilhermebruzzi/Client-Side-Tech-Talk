@@ -1,0 +1,1 @@
+window.addEventListener("load",function(){var a=document.querySelector("#container-body");a.addEventListener("click",function(){this.style.backgroundColor="#666666"},false)},false);

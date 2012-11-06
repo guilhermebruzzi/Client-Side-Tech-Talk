@@ -1,0 +1,46 @@
+@import "normalize.less";
+@import "style.less";
+
+@red: #660000;
+@gray:  #333333;
+
+.furby-img-container{
+  background: url(../img/furby-sprite.png) no-repeat top left;
+  float: left;
+}
+
+section.container{
+  height: 100%;
+  width: 100%;
+  border: 1px solid @gray;
+
+  article.container-body{
+    color: @red;
+    height: 500px;
+  }
+
+  div.furby-black{
+    .furby-img-container;
+    background-position: 0 0;
+    width: 300px;
+    height: 400px;
+  }
+
+  div.furby-grey{
+    .furby-img-container;
+    background-position: 0 -450px;
+    width: 350px;
+    height: 262px;
+  }
+
+  div.furby-orange{
+    .furby-img-container;
+    background-position: 0 -762px;
+    width: 389px;
+    height: 432px;
+  }
+
+}
+
+
+
