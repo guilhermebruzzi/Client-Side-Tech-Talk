@@ -9,11 +9,10 @@ window.addEventListener("load", function(){
     function escondeFotosEmLocalStorage(){
         if(typeof(Storage)!=="undefined")
         {
-            var fotos = localStorage.getItem("fotos_indices");
-            if(typeof(fotos)!=="undefined" && fotos){
-                for (var i = 0; i < fotos.length; i++){
-                    var foto_index = fotos[i];
-                    var foto = document.querySelector("#furby" + foto_index);
+            for (var i = 0; i < 3; i++){
+                var foto_index = localStorage.getItem("foto_index" + i.toString());
+                if(foto_index){
+                    var foto = document.querySelector("#furby" + i);
                     foto.style.display = "none";
                 }
             }
@@ -23,25 +22,18 @@ window.addEventListener("load", function(){
     function salvaFotoEscondidaNaLocalStorage(foto_index){
         if(typeof(Storage)!=="undefined")
         {
-            var fotos = localStorage.getItem("fotos_indices");
-            if(typeof(fotos)!=="undefined" && fotos){
-                fotos.push(foto_index)
-                localStorage.setItem("fotos_indices", fotos)
-            }
-            else{
-                localStorage.setItem("fotos_indices", [foto_index])
-            }
-
+            localStorage.setItem("foto_index" + foto_index.toString(), true);
         }
     }
 
     escondeFotosEmLocalStorage();
 
     var furbys = document.querySelectorAll(".furby");
-    for (var i = 0; i < furbys.length; i++){
+    for (var i = 0; i < 3; i++){
         furbys[i].addEventListener("click", function(){
+            var foto_index = parseInt(this.dataset.index, 10);
             this.style.display = "none";
-            salvaFotoEscondidaNaLocalStorage(i);
+            salvaFotoEscondidaNaLocalStorage(foto_index);
         }, false);
     }
 
