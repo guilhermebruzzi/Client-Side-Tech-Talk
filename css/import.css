@@ -157,7 +157,7 @@ footer a:hover {
     color: #3590C6;
 }
 .furby-img-container {
-    background: url("http://localhost/Client-Side-Tech-Talk/css/../img/furby-sprite.png") no-repeat scroll left top transparent;
+    background: url("../img/furby-sprite.png") no-repeat scroll left top transparent;
     float: left;
 }
 section.container {
@@ -170,19 +170,19 @@ section.container article.container-body {
     height: 500px;
 }
 section.container div.furby-black {
-    background: url("http://localhost/Client-Side-Tech-Talk/css/../img/furby-sprite.png") no-repeat scroll 0 0 transparent;
+    background: url("../img/furby-sprite.png") no-repeat scroll 0 0 transparent;
     float: left;
     height: 400px;
     width: 300px;
 }
 section.container div.furby-grey {
-    background: url("http://localhost/Client-Side-Tech-Talk/css/../img/furby-sprite.png") no-repeat scroll 0 -450px transparent;
+    background: url("../img/furby-sprite.png") no-repeat scroll 0 -450px transparent;
     float: left;
     height: 262px;
     width: 350px;
 }
 section.container div.furby-orange {
-    background: url("http://localhost/Client-Side-Tech-Talk/css/../img/furby-sprite.png") no-repeat scroll 0 -762px transparent;
+    background: url("../img/furby-sprite.png") no-repeat scroll 0 -762px transparent;
     float: left;
     height: 432px;
     width: 389px;

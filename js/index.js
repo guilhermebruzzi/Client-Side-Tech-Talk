@@ -1,9 +1,3 @@
-/*$(document).ready(function(){
-    $("#container-body").click(function(){
-       $(this).css("background-color", "#666666")
-    });
-*/
-
 window.addEventListener("load", function(){
 
     function escondeFotosEmLocalStorage(){
