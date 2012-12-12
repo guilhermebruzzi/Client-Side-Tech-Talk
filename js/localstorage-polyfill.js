@@ -1,6 +1,6 @@
-if (typeof window.localStorage == 'undefined' || typeof window.sessionStorage == 'undefined') (function () {
+getLocalStorage = function(){
 
-    var Storage = function (type) {
+	var Storage = function (type) {
 
         function createCookie(name, value, days) {
 
@@ -102,7 +102,7 @@ if (typeof window.localStorage == 'undefined' || typeof window.sessionStorage ==
 
 
 
-// initialise if there's already data
+		// initialise if there's already data
 
         var data = getData();
 
@@ -130,7 +130,7 @@ if (typeof window.localStorage == 'undefined' || typeof window.sessionStorage ==
 
             key: function (i) {
 
-// not perfect, but works
+				// not perfect, but works
 
                 var ctr = 0;
 
@@ -169,13 +169,6 @@ if (typeof window.localStorage == 'undefined' || typeof window.sessionStorage ==
         };
 
     };
-
-
-
-    if (typeof window.localStorage == 'undefined') window.localStorage = new Storage('local');
-
-    if (typeof window.sessionStorage == 'undefined') window.sessionStorage = new Storage('session');
-
-
-
-})();
+	
+	return Storage("local");
+};
